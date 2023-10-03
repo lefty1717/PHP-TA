@@ -13,8 +13,8 @@
         // print("Hello World<br>");
         // print "Hello World<br>";
         // printf("%s %s<br>", "Hello", "World");
-        $var1 = "Hello";
-        printf("%'-7s<br>", $var1);
+        // $var1 = "Hello";
+        // printf("%'-7s<br>", $var1);
         
         // !    
         // ?
@@ -26,37 +26,42 @@
     <?php   // function
         $score = 90;
         // function calScore($score){
-        //     global $situation;
-        //     $situation = ($score >= 60) ? "及格" : "不及格" ;
-        // }
-        // calScore($score);
-        // // echo $GLOBALS['situation'];
+            //     global $situation;
+            //     $situation = ($score >= 60) ? "及格" : "不及格" ;
+            // }
+            // calScore($score);
+            // // echo $GLOBALS['situation'];
         // echo "$situation<br>";
-    ?>
+        ?>
     <?php
         // echo phpinfo()."<br>";
-
-        // echo "isset: ".isset($score)."<br>";
+        $score = 90;
+        echo '$score = '.$score.'<br>';
+        echo "isset: ".isset($score)."<br>";
         // echo var_dump(isset($score))."<br>";
         
-        // unset($score);
-        // define("PI", 3.14);
+        echo "empty: ".empty($score)."<br>";
+        // echo var_dump(empty($score))."<br>";
+        
+        echo "is_null: ".is_null($score)."<br>";
+        // echo var_dump(is_null($score))."<br>";
+        
+        echo 'gettype: '.gettype($score)."<br>";
+        
+        settype($score, "string");
+        echo 'settype: '.gettype($score).'<br>';
+        $score = (int)$score;
+        echo '(int): '.gettype($score).'<br>';
+        
+        echo var_dump($score)."<br>";
+        echo var_export($score)."<br>";
+        
+        define("PI", 3.14);
+        echo PI;
         // echo "defined: ".defined("PI")."<br>";
-
-        // echo "empty: ".empty($score)."<br>";
-        // echo var_dump(isset($score))."<br>";
-
-        // echo "is_null: ".is_null($score)."<br>";
-        // echo var_dump(isset($score))."<br>";
-
-        // echo gettype($score)."<br>";
-
-        // settype($score,"array");
-        // echo var_dump(isset($score))."<br>";
-
-        // echo gettype($score)."<br>";
-        // echo var_export($score)."<br>";
-    ?>
+        // unset($score);
+        // echo $score."<br>"
+        ?>
     <?php
         // for($i = 1; $i < 10; $i++)
         //     echo $i . " ";
