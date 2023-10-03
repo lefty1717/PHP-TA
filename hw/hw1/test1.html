@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form:get>((input[type=radio][name=name$][value=male])+br)*2+((input[type=text][name=name$])+br)*2+input[type=submit][value=送出] -->
+    <form action="test2.php" method="get">
+        性別: 
+            男<input type="radio" name="gender" value="male" checked>
+            女<input type="radio" name="gender" value="female"><br>
+        身高: <input type="text" name="hight" required><br>
+        體重: <input type="text" name="weight" required><br>
+        <input type="submit" value="送出">
+    </form>
+</body>
+</html>
