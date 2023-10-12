@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    echo "<h1>Hello world. Welcome to backend.</h1>"
+        echo "<h1>Hello world. Welcome to backend.</h1>"
     ?>
     <form action="be.php" method="get">
         姓名: <input type="text" name="name" placeholder="請輸入姓名" required><br><br>
@@ -22,6 +22,7 @@
             
             <option value="PT">兼職</option>
             <option value="await">待業</option>
+            <option value="chaos">隨便亂填</option>
         </select><br><br>
         備註: <textarea name="note" cols="30" rows="5"></textarea><br><br>
         <input type="submit" value="送出"><br><br>
