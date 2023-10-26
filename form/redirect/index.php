@@ -15,7 +15,6 @@
     <div class="container-fluid">
         <?php 
             $current_page = 'homepage';
-            echo $current_page;
                 if(array_key_exists('page',$_GET)){
                     $current_page = $_GET['page'];
                 }
@@ -36,6 +35,6 @@
 
     <div>
         <?php include('footer.php');?>
-        </div>
+    </div>
 </body>
 </html>
