@@ -1,38 +1,43 @@
-<table border="1">
-	<thead>User Profile</thead>
-	<tbody>
-		<?php 
-		$connect = require_once('../db_setting.php');
-		$sql="SELECT * FROM test_table";
-		$result = mysqli_query($connect,$sql);
-		?>
-
-        <tr>
-            <th>User ID</th>
-            <th>Age</th>
-            <th>Email</th>
-            <th>Phone</th>
-        </tr>
-        
-		<?php
-		if (mysqli_num_rows($result) > 0) {
-			// output data of each row
-			while($row = mysqli_fetch_array($result)) {
-				echo var_dump($row);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>User ID</th>
+				<th>Age</th>
+				<th>Email</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+			$connect = require_once('../db_setting.php');
+			$sql = "SELECT * FROM test_table";
+			$result = mysqli_query($connect, $sql);
+			$arr = mysqli_fetch_all($result, MYSQLI_ASSOC);
+			
+			if (mysqli_num_rows($result) > 0) {
+				foreach ($arr as $row) {
+					echo var_dump($row);
+					?>
+					<tr>
+						<td><?php echo $row["user_id"] ?></td>
+						<td><?php echo $row["age"] ?></td>
+						<td><?php echo $row["email"] ?></td>
+						<td><?php echo $row["phone"] ?></td>
+					</tr>
+					<?php
+				}
+			} else
+				echo "<tr><td colspan='4'>No Data</td></tr>";
 			?>
-				<tr>
-					<td>user_id: <?php echo $row["user_id"] ?></td>
-					<td>age: <?php echo $row["age"] ?></td>
-					<td>email: <?php echo $row["email"] ?></td>
-					<td>phone: <?php echo $row["phone"] ?></td>
-				</tr>
-			<?php
-			}
-			mysqli_close($connect);
-		}
-		else{
-			echo "<tr><td>No Data</td></td>";
-		}
-		?>
-	</tbody>
-</table>
+		</tbody>
+	</table>
+</body>
+</html>

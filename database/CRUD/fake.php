@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <table border=1>
+    <table border="1">
         <tr>
             <td>user_id</td>
             <td>age</td>
@@ -18,10 +18,10 @@
             ["user_id" => "finn", "age" => "87", "email" => "dsfdf@gmail.com", "phone" => "09165164"],
             ["user_id" => "芬恩", "age" => "100", "email" => "asdf@gmail.com", "phone" => "87878787"],
         ];
+        // $result = [];
 
         if (count($result) > 0) {
             foreach($result as $row) {
-                // echo var_dump($row);
                 ?>
                 <tr>
                     <td><?php echo $row["user_id"] ?></td>
@@ -31,6 +31,13 @@
                 </tr>
                 <?php
             }
+        }
+        else{
+        ?>
+            <tr>
+                <td colspan="4" style="text-align: center;">No data</td>
+            </tr>
+        <?php
         }
         ?>
     </table>
