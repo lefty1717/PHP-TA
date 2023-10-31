@@ -1,5 +1,5 @@
 <?php
-    $order_total = array()
+    $order_total = array();
     $order_total['1221000'] = 100;  
     $order_total['1221001'] = 200;  
     $order_total['1221002'] = 300; 

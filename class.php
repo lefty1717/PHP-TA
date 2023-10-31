@@ -24,27 +24,31 @@
         // sds
     ?>
     <?php   // function
-        $score = 90;
         // function calScore($score){
-            //     global $situation;
-            //     $situation = ($score >= 60) ? "及格" : "不及格" ;
-            // }
-            // calScore($score);
-            // // echo $GLOBALS['situation'];
+        //     global $situation;
+        //     $situation = ($score >= 60) ? "及格" : "不及格" ;
+        //     return $situation;
+        // }
+        
+        // $score = 90;
+        // $res =  calScore($score);
+        // // echo $GLOBALS['situation'];
+        // print_r($GLOBALS);
         // echo "$situation<br>";
+        // echo "$res<br>";
         ?>
     <?php
         // echo phpinfo()."<br>";
         $score = 90;
         echo '$score = '.$score.'<br>';
         echo "isset: ".isset($score)."<br>";
-        // echo var_dump(isset($score))."<br>";
+        echo var_dump(isset($score))."<br>";
         
         echo "empty: ".empty($score)."<br>";
-        // echo var_dump(empty($score))."<br>";
+        echo var_dump(empty($score))."<br>";
         
         echo "is_null: ".is_null($score)."<br>";
-        // echo var_dump(is_null($score))."<br>";
+        echo var_dump(is_null($score))."<br>";
         
         echo 'gettype: '.gettype($score)."<br>";
         
@@ -58,7 +62,7 @@
         
         define("PI", 3.14);
         echo PI;
-        // echo "defined: ".defined("PI")."<br>";
+        echo "defined: ".defined("PI")."<br>";
         // unset($score);
         // echo $score."<br>"
         ?>

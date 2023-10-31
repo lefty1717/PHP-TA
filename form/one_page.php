@@ -35,9 +35,7 @@
             }
             else{
                 $birth=$_POST["birth"];
-                echo date("Y");
-                echo date("Y",strtotime($birth));
-                $age=date("Y") - date("Y",strtotime($birth));
+                $age=date("Y") - date("Y", strtotime($birth));
             }
         }
     }
@@ -52,7 +50,7 @@
         女  &nbsp&nbsp <?php echo $genderErr?><br><br>
     生日：<input type="date" name="birth">&nbsp <?php echo $birthErr?><br><br>
     <input type="submit" name="submit" value="送出">
-</form
+</form>
 
 <?php
 if (isset($_POST["submit"]) && !empty($username) && !empty($password) && !empty($gender) && !empty($birth)){
@@ -62,9 +60,4 @@ if (isset($_POST["submit"]) && !empty($username) && !empty($password) && !empty(
     echo "你的生日是：".$birth."<br>";
     echo "你今年".$age."歲<br>";
 }
-echo "<h2>Hello ".$username."!</h2><br>";
-echo "你的密碼是：".$password."<br>";
-echo "你的性別是：".$gender."<br>";
-echo "你的生日是：".$birth."<br>";
-echo "你今年".$age."歲<br>";
 ?>
