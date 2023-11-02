@@ -10,13 +10,13 @@
 		
 		<?php
             $result = require_once('./R.php');
-            echo 'result: ', var_dump($result).'<br>';
+            // echo 'result: ', var_dump($result).'<br>';
         ?>
 		<?php
 		if (mysqli_num_rows($result) > 0) {
 			// output data of each row
 			while($row = mysqli_fetch_array($result)) {
-				echo var_dump($row).'<br>';
+				// echo var_dump($row).'<br>';
 			?>
 				<tr>
 					<td>user_id: <?php echo $row["user_id"] ?></td>
