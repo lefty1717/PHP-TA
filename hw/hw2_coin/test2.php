@@ -1,9 +1,10 @@
 <?php
     $coin = $_GET['coin'];
-    $fifty = $_GET['50']=='true' ? true : false;
-    $ten = $_GET['10']=='true' ? true : false;
-    $five = $_GET['5']=='true' ? true : false;
-    $one = $_GET['1']=='true' ? true : false;
+    $fifty = $_GET['fifty']=='true' ? true : false;
+    $ten = $_GET['ten']=='true' ? true : false;
+    $five = $_GET['five']=='true' ? true : false;
+    $one = $_GET['one']=='true' ? true : false;
+
     $ans = ['50'=>0, '10'=>0, '5'=>0, '1'=>0];
 
     if($fifty){
@@ -28,8 +29,8 @@
 
 <?php
     $coin = $_GET['coin'];
-    $setting = ['50'=>false, '10'=>false, '5'=>false, '1'=>false];
     $ans = ['50'=>0, '10'=>0, '5'=>0, '1'=>0];
+    $setting = ['50'=>false, '10'=>false, '5'=>false, '1'=>false];
     foreach ($setting as $type=>$chose)
         $setting[$type] = $_GET[$type]=='true' ?? false;
 

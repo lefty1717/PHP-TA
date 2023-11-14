@@ -5,27 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input[type="radio"] + label{
+        input{
             background-color: transparent;
-        }
-        input[type="radio"]:checked{
-            background-color: #ffffff;
+            border: 0;
         }
         input[type="submit"]{
-            width: 100%; 
+            width: 100%;
             color: #ffffff;
-            background-color: #73bf00; 
             border: 0;
+        }
+        tr{
+            background-color: #73bf00;
+        }
+        td{
+            padding: 5px;
         }
     </style>
 </head>
 <body>
     <form action="test2.php" method="get">
-        <!-- <table style="background-color: #73BF00; color: #ffffff;"> -->
-        <table border="0" bgcolor="#73BF00" style="background-color: #73BF00; color: #ffffff;">
+        <table border="0" style="color: #ffffff;">
             <tr>
                 <td><label for="coin">找零金額: </label></td>
-                <td><input type="number" name="coin" required></td>
+                <td><input type="number" name="coin" required placeholder="請輸入金額"></td>
+            </tr>
+            <tr>
+                <td><label for="fifty">50元銅板: </label></td>
+                <td>
+                    是否需要
+                    <input type="radio" name="fifty" value="true" checked>是(預設)
+                    <input type="radio" name="fifty" value="false">否
+                </td>
+            </tr>
+            <tr>
+                <td>10元銅板: </td>
+                <td>
+                    是否需要
+                    <input type="radio" name="ten" value="true" checked>是(預設)
+                    <input type="radio" name="ten" value="false">否
+                </td>
+            </tr>
+            <tr>
+                <td>5元銅板: </td>
+                <td>
+                    是否需要
+                    <input type="radio" name="five" value="true" checked>是(預設)
+                    <input type="radio" name="five" value="false">否
+                </td>
+            </tr>
+            <tr>
+                <td>1元銅板: </td>
+                <td>視需要而定<input type="radio" name="one" value="true" checked></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="確定">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: transparent;
+            border: 0;
+        }
+        input[type="submit"]{
+            width: 100%;
+            color: #ffffff;
+            border: 0;
+        }
+        tr{
+            background-color: #73bf00;
+        }
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="test2.php" method="get">
+        <table border="0" style="color: #ffffff;">
+            <tr>
+                <td><label for="coin">找零金額: </label></td>
+                <td><input type="number" name="coin" required placeholder="請輸入金額"></td>
             </tr>
             <tr>
                 <td><label for="fifty">50元銅板: </label></td>
