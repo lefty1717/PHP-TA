@@ -19,11 +19,10 @@
 			<?php 
 			$connect = require_once('../db_setting.php');
 			$sql = "SELECT * FROM test_table";
-			// $result = mysqli_query($connect, $sql);
-			$data = mysqli_fetch_all($result, MYSQLI_BOTH);
+			$result = mysqli_query($connect, $sql);
 			
 			if (mysqli_num_rows($result) > 0) {
-				foreach ($data as $row) {
+				while($row = mysqli_fetch_array($result)) {
 					echo var_dump($row);
 					?>
 					<tr>
