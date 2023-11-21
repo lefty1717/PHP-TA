@@ -31,7 +31,7 @@
     $coin = $_GET['coin'];
     $ans = ['50'=>0, '10'=>0, '5'=>0, '1'=>0];
     foreach($ans as $type=>$num){
-        if($_GET[$type]){
+        if($_GET[$type] == 'true'){
             $ans[$type] = intdiv($coin, $type);
             $coin %= $type;
         }
@@ -44,11 +44,11 @@
 <br>
 
 <?php
-    $coin = (int)$_GET['coin'];
-    $ans = ['50'=>0, '10'=>0, '5'=>0, '1'=>0];
-    foreach ($ans as $type=>$chose){
-        $ans[$type] = $_GET[$type] ? intdiv($coin, $type) : '0';
-        $coin = gettype($ans[$type]) == 'string' ? $coin : $coin%$type;
-        echo "$type 元: $ans[$type] 個<br>";
-    }
+    // $coin = (int)$_GET['coin'];
+    // $ans = ['50'=>0, '10'=>0, '5'=>0, '1'=>0];
+    // foreach($ans as $type=>$chose){
+    //     $ans[$type] = $_GET[$type] ? intdiv($coin, $type) : '0';
+    //     $coin = gettype($ans[$type]) == 'string' ? $coin : $coin%$type;
+    //     echo "$type 元: $ans[$type] 個<br>";
+    // }
 ?>
