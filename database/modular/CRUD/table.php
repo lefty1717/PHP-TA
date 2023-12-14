@@ -9,6 +9,7 @@
         </tr>
 		
 		<?php
+			$_SESSION['user_id'] = 'asdf';
             $result = require_once('./R.php');
             // echo 'result: ', var_dump($result).'<br>';
 			$data = mysqli_fetch_all($result, MYSQLI_BOTH);
